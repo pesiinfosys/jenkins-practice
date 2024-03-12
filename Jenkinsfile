@@ -6,12 +6,19 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "Building..."
+                echo "Building..." // echo command only will run directly...other linux commands must mention in sh ''
+                // running linux coomand
+                sh 'ls -ltr'
+                sh 'pwd'
+                sh 'date'
+
             }
         }
         stage('test') {
             steps {
                 echo "Testing..."
+                 sh 'hostname -f'
+                sh 'uname'
             }
         }
         stage('deploy') {
