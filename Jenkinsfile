@@ -24,6 +24,11 @@ pipeline {
         stage('deploy') {
             steps {
                 echo "Deployimg..."
+                // we can mention multiple linux commands like bellow ('''')
+                sh '''    
+                df -h
+                free -m
+                '''
             }
         }
     }
