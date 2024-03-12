@@ -29,6 +29,7 @@ pipeline {
                 df -h
                 free -m
                 '''
+                echo "PESI"
             }
         }
     }
