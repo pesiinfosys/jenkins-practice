@@ -20,4 +20,15 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            echo "Always do this when pipeline triggered"
+        }
+        success {
+            echo "Run at the time of SUCCESS"
+        }
+        failure {
+            echo "Run at the time of failure"
+        }
+    }
 }
