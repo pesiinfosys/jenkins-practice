@@ -7,6 +7,9 @@ pipeline {
     }
     stages {
         stage('sample') {
+            environment {
+                SSH_CREDS = credentials('my-predefined-ssh-creds')
+            }
             steps{
                sh '''
                 echo "pesi"
