@@ -13,6 +13,7 @@ pipeline {
             steps{
                sh '''
                 echo "pesi"
+                echo $SSH_CREDS
                 # printenv
                ''' 
             }
