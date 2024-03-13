@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('sample') {
             environment {
-                SSH_CREDS = credentials('my-predefined-ssh-creds')
+                SSH_CREDS = credentials('Agent-1')
             }
             steps{
                sh '''
